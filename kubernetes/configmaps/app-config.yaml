@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: weather-config
+data:
+  API_URL: "http://weather-backend"
+  NODE_ENV: "production"

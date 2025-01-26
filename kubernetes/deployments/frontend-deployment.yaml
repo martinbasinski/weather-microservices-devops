@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: weather-frontend
+  template:
+    metadata:
+      labels:
+        app: weather-frontend
+    spec:
+      containers:
+      - name: weather-frontend
+        image: martin93/weather-frontend:latest
+        env:
+        - name: REACT_APP_API_URL
+          value: "http://weather-backend.default.svc.cluster.local"  # Pełny DNS w klastrze
+        ports:
+        - containerPort: 3001
