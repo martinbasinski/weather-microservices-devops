@@ -21,4 +21,20 @@ __pycache__/
 # Terraform
 *.tfstate
 *.tfstate.*
-.terraform/
+.terraform/kubectl
+minikube-linux-amd64
+# Kubernetes
+kubectl
+minikube*
+.kube/
+*.kubeconfig
+
+# Local development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
